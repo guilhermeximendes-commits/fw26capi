@@ -1,6 +1,7 @@
 module.exports = (app)=>{
     app.get('/noticias', async (req, res)=>{
-        try{
+        res.send("noticias")
+       /*  try{
             await app.dbClient.connect();
             const resultado = await app.dbClient.db('portalnoticias')
             .collection('noticias')
@@ -12,6 +13,6 @@ module.exports = (app)=>{
             res.send("erro:"+error)
         }finally{
             await app.dbClient.close()
-        }
+        } */
     })
 }
