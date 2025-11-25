@@ -7,7 +7,14 @@ const port = 3000;
 app.set('view engine','ejs')
 app.set('views','./viwes')
 
-require("../rotas/home")
+require("../db/dbconnect")(app)
+require("../rotas/home")(app)
+require("../rotas/getnoticias")(app)
+require("../rotas/getnoticias")(app)
+require("../rotas/getnoticias")(app)
+require("../rotas/postnoticias")(app)
+require("../rotas/putnoticias")(app)
+require("../rotas/delnoticias")(app)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
