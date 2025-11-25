@@ -5,7 +5,7 @@ const port = 3000;
 
  // Define your routes
 app.set('view engine','ejs')
-app.set('views','./viwes')
+app.set('views','./views')
 
 require("../db/dbconnect")(app)
 require("../rotas/home")(app)
