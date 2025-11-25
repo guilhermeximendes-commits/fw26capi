@@ -1,18 +1,17 @@
 module.exports = (app)=>{
     app.get('/noticias', async (req, res)=>{
-        res.send("noticias")
-       /*  try{
+        try{
             await app.dbClient.connect();
             const resultado = await app.dbClient.db('portalnoticias')
             .collection('noticias')
             .find()
             .toArray();
+            console.log(resultado)
             res.json(resultado);
         }catch(error){
-            await app.dbClient.close()
             res.send("erro:"+error)
         }finally{
             await app.dbClient.close()
-        } */
+        }
     })
 }
